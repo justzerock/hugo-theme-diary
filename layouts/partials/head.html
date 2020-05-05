@@ -34,6 +34,7 @@
 {{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
+<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/iframe.css" />
 
 <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
 <script>
