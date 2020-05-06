@@ -21,6 +21,7 @@
 <script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relURL}}" ></script>
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/iframe.css" />
 
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
@@ -34,7 +35,6 @@
 {{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
-<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/iframe.css" />
 
 <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
 <script>
